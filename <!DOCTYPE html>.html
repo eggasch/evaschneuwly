@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Webpage</title>
+    <style>
+        body {
+            background-color: #fff;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header, footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            min-height: calc(100vh - 120px);
+        }
+
+        img {
+            max-width: 50vw;
+            max-height: 50vh;
+            margin: 10px;
+        }
+
+        p {
+            text-align: center;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Sneak Peek - Soon More Details</h1>
+    </header>
+
+    <main id="image-container"></main>
+
+    <footer>
+        <p>Page and Content by Eva Schneuwly | <a href="#">About</a></p>
+    </footer>
+
+    <script>
+        // Replace 'USERNAME' with your GitHub username
+        const githubUsername = 'eggasch';
+
+        // Array of image filenames
+        const imageFilenames = [
+            '2017 Organic Protest.jpg',
+            '2016 Attention Fragile.jpg',
+            '2016 Papierlampe.jpg',
+            '2016 Räumling.jpg',
+            '2016 Space in-between.jpg',
+            '2017 Natural occupation.jpg',
+            '2017 Verborgener Raum.jpg',
+            '2019 Chimaira.jpg',
+            '2019 Imaginary Clothes.jpg',
+            '2021 Modern Witch.JPG',
+            '2021 Speculating on Utopia.jpg',
+            '2022 Commercial or Housing.jpg',
+            '2022 Torf.jpg',
+            '2023 Unhidden.jpg',
+            '2023 photoSchweiz.jpg',
+            '2023 Profanation.jpg',
+            '2023 Torf.jpg',
+            '2023 Unhidden.jpg'
+        ];
+
+        // Shuffle the array to display images in random order
+        imageFilenames.sort(() => Math.random() - 0.5);
+
+        // Get the main container
+        const mainContainer = document.getElementById('image-container');
+
+        // Display images and filenames
+        imageFilenames.forEach(filename => {
+            const imagePath = `https://raw.githubusercontent.com/${githubUsername}/evaschneuwly/main/${filename}`;
+            const imgElement = document.createElement('img');
+            imgElement.src = imagePath;
+
+            const pElement = document.createElement('p');
+            pElement.textContent = filename;
+
+            mainContainer.appendChild(imgElement);
+            mainContainer.appendChild(pElement);
+        });
+    </script>
+</body>
+</html>
