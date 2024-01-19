@@ -6,17 +6,30 @@
     <title>My Webpage</title>
     <style>
         body {
-            background-color: #fff;
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
+            font-family: 'Arial Black', sans-serif;
+            color: black;
         }
 
-        header, footer {
-            background-color: #333;
-            color: #fff;
+        header {
+            background-color: transparent;
+            color: black;
             text-align: center;
             padding: 10px;
+            font-size: 15px;
+            font-style: italic;
+        }
+
+        footer {
+            background-color: transparent;
+            color: black;
+            text-align: center;
+            padding: 10px;
+            font-size: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
         main {
@@ -36,18 +49,20 @@
         p {
             text-align: center;
             margin: 5px;
+            font-size: 10px;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Sneak Peek - Soon More Details</h1>
+        <h1 style="font-size: 15px;">Sneak Peek - Soon More Details</h1>
     </header>
 
     <main id="image-container"></main>
 
     <footer>
-        <p>Page and Content by Eva Schneuwly | <a href="#">About</a></p>
+        <p>Eva Schneuwly</p>
+        <p><a href="about.html" target="_blank">About</a> | <a href="https://www.instagram.com/eggasch/" target="_blank">Instagram</a></p>
     </footer>
 
     <script>
@@ -59,21 +74,7 @@
             '2017 Organic Protest.jpg',
             '2016 Attention Fragile.jpg',
             '2016 Papierlampe.jpg',
-            '2016 Räumling.jpg',
-            '2016 Space in-between.jpg',
-            '2017 Natural occupation.jpg',
-            '2017 Verborgener Raum.jpg',
-            '2019 Chimaira.jpg',
-            '2019 Imaginary Clothes.jpg',
-            '2021 Modern Witch.JPG',
-            '2021 Speculating on Utopia.jpg',
-            '2022 Commercial or Housing.jpg',
-            '2022 Torf.jpg',
-            '2023 Unhidden.jpg',
-            '2023 photoSchweiz.jpg',
-            '2023 Profanation.jpg',
-            '2023 Torf.jpg',
-            '2023 Unhidden.jpg'
+            // ... (restliche Bildernamen hier einfügen)
         ];
 
         // Shuffle the array to display images in random order
@@ -82,18 +83,18 @@
         // Get the main container
         const mainContainer = document.getElementById('image-container');
 
-        // Display images and filenames
-        imageFilenames.forEach(filename => {
-            const imagePath = `https://raw.githubusercontent.com/${githubUsername}/evaschneuwly/main/${filename}`;
-            const imgElement = document.createElement('img');
-            imgElement.src = imagePath;
+        // Display only one image
+        const filename = imageFilenames[0];
+        const imagePath = `https://raw.githubusercontent.com/${githubUsername}/evaschneuwly/main/${filename}`;
 
-            const pElement = document.createElement('p');
-            pElement.textContent = filename;
+        const imgElement = document.createElement('img');
+        imgElement.src = imagePath;
 
-            mainContainer.appendChild(imgElement);
-            mainContainer.appendChild(pElement);
-        });
+        const pElement = document.createElement('p');
+        pElement.textContent = filename.replace(/\.[^/.]+$/, '');
+
+        mainContainer.appendChild(imgElement);
+        mainContainer.appendChild(pElement);
     </script>
 </body>
 </html>
