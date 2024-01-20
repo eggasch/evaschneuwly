@@ -10,6 +10,7 @@
             padding: 0;
             font-family: 'Arial Black', sans-serif;
             color: black;
+            position: relative;
         }
 
         header {
@@ -18,7 +19,12 @@
             text-align: center;
             padding: 10px;
             font-size: 15px;
-            font-style: italic;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            z-index: 1;
         }
 
         footer {
@@ -27,9 +33,9 @@
             text-align: center;
             padding: 10px;
             font-size: 15px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
         }
 
         main {
@@ -37,78 +43,136 @@
             flex-wrap: wrap;
             justify-content: center;
             align-items: center;
-            min-height: calc(100vh - 120px);
+            min-height: calc(100vh - 190px); /* Adjusted to accommodate the Abouttext */
+            position: relative;
+            z-index: 0;
+        }
+
+        .image-container {
+            text-align: center;
         }
 
         img {
             max-width: 50vw;
             max-height: 50vh;
             margin: 10px;
+            opacity: 0;
+            transition: opacity 2s ease-in-out;
         }
 
         p {
-            text-align: center;
-            margin: 5px;
-            font-size: 10px;
+            text-align: right;
+            margin: 0;
+            font-size: 15px;
+            font-family: 'Arial Black', sans-serif;
+            white-space: pre-line;
+            max-width: 40ch; /* Updated maximum line length */
+            position: absolute;
+            right: 0;
+            top: 50px; /* Adjusted top position */
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.8);
+            display: none;
+        }
+        
+        #scroll-text-container {
+            white-space: nowrap;
+            overflow: hidden;
+            color: #00FF00; /* Neongrün */
+            font-size: 30px;
+            font-family: 'Arial Black', sans-serif;
+            animation: scroll 10s linear infinite; /* 10s für eine vollständige Überquerung */
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1 style="font-size: 15px;">Sneak Peek - Soon More Details</h1>
+        <h1 style="font-size: 15px; margin-left: 10px;">Eva Schneuwly</h1>
+        <h1 style="font-size: 15px; margin-right: 10px;" onclick="toggleAbout()">About | <a href="https://www.instagram.com/eggasch/" target="_blank" style="color: black; text-decoration: none;">Instagram</a></h1>
     </header>
 
-    <main id="image-container"></main>
+    <main>
+        <div class="image-container" id="image-container"></div>
+        <div id="scroll-text-container">page under construction // page under construction // page under construction // page under construction //</div>
+        <p id="about-text">Eva Schneuwly, geboren 1995 in Bern, verbrachte ihre Kindheit im Kanton Freiburg. Schon früh entwickelte sie ein Interesse an Architektur, Film und Fotografie. Während ihres Architekturstudiums an der ETH Zürich fokussierte sie auf soziopolitische Themen und den Einfluss menschlicher Entscheidungen auf den Raum. Ihre Projekte integrieren Fotografie und Video als Medium, um gesellschaftliche Fragen dokumentarisch und entwerferisch darzustelllen. Mit dem Masterabschluss 2023 widmet sie sich nun eigenständig visuellen Reflexionen über die Dynamik zwischen Mensch und Umwelt.  <br><br>eva-schneuwly@hotmail.com <br>@eggasch<br><br>Die vorliegenden Inhalte stammen aus den Projektarbeiten und wurden teilweise mit Kollaborationspartner:innen der jeweiligen Projekte entwickelt. Die Rechte liegen bei allen Beteiligten der Projekte.<br><br>  © Eva Schneuwly, 2024</p>
+    </main>
 
     <footer>
-        <p>Eva Schneuwly</p>
-        <p><a href="about.html" target="_blank">About</a> | <a href="https://www.instagram.com/eggasch/" target="_blank">Instagram</a></p>
+        <p id="image-caption" style="font-size: 10px;"></p>
     </footer>
 
     <script>
-        // Replace 'USERNAME' with your GitHub username
         const githubUsername = 'eggasch';
-
-        // Array of image filenames
         const imageFilenames = [
-        '2017 Organic Protest.jpg',
-            '2016 Attention Fragile.jpg',
-            '2016 Papierlampe.jpg',
-            '2016 Räumling.jpg',
-            '2016 Space in-between.jpg',
-            '2017 Natural occupation.jpg',
-            '2017 Verborgener Raum.jpg',
-            '2019 Chimaira.jpg',
-            '2019 Imaginary Clothes.jpg',
-            '2021 Modern Witch.JPG',
-            '2021 Speculating on Utopia.jpg',
-            '2022 Commercial or Housing.jpg',
-            '2022 Torf.jpg',
-            '2023 Unhidden.jpg',
-            '2023 photoSchweiz.jpg',
-            '2023 Profanation.jpg',
-            '2023 Torf.jpg',
-            '2023 Unhidden.jpg'
-        ];
+    '2023 Unhidden.jpg',
+    '2016 Attention Fragile.jpg',
+    '2016 Räumling.jpg',
+    '2016 Space in-between.jpg',
+    '2017 Balance.jpg',
+    '2017 Natural occupation.jpg',
+    '2019 Imaginary Clothes.jpg',
+    '2021 Modern Witch.JPG',
+    '2021 Speculating on Utopia.jpg',
+    '2022 Torf.jpg',
+    '2023 Balanza.jpg',
+    '2023 Banza Engel.jpg',
+    '2023 Loreto Abschminken.jpg',
+    '2023 Loreto Bank.jpg',
+    '2023 Loreto.jpg',
+    '2023 photoSchweiz.jpg',
+    '2023 Profanation.jpg',
+    '2023 Torf.jpg'
+];
 
-        // Shuffle the array to display images in random order
         imageFilenames.sort(() => Math.random() - 0.5);
 
-        // Get the main container
+        let currentImageIndex = 0;
         const mainContainer = document.getElementById('image-container');
+        const captionElement = document.getElementById('image-caption');
+        const aboutText = document.getElementById('about-text');
 
-        // Display only one image
-        const filename = imageFilenames[0];
+        function showNextImage() {
+            currentImageIndex = (currentImageIndex + 1) % imageFilenames.length;
+
+            const filename = imageFilenames[currentImageIndex];
+            const imagePath = `https://raw.githubusercontent.com/${githubUsername}/evaschneuwly/main/${filename}`;
+            const nextImage = document.createElement('img');
+            nextImage.src = imagePath;
+            nextImage.style.opacity = 0;
+            mainContainer.innerHTML = '';
+            mainContainer.appendChild(nextImage);
+
+            const captionText = filename.replace(/\.[^/.]+$/, '');
+            captionElement.textContent = captionText;
+
+            requestAnimationFrame(() => {
+                nextImage.style.opacity = 1;
+            });
+        }
+
+        function toggleAbout() {
+            aboutText.style.display = (aboutText.style.display === 'none' || aboutText.style.display === '') ? 'block' : 'none';
+        }
+
+        const filename = imageFilenames[currentImageIndex];
         const imagePath = `https://raw.githubusercontent.com/${githubUsername}/evaschneuwly/main/${filename}`;
+        const initialImage = document.createElement('img');
+        initialImage.src = imagePath;
+        mainContainer.appendChild(initialImage);
 
-        const imgElement = document.createElement('img');
-        imgElement.src = imagePath;
+        const initialCaptionText = filename.replace(/\.[^/.]+$/, '');
+        captionElement.textContent = initialCaptionText;
 
-        const pElement = document.createElement('p');
-        pElement.textContent = filename.replace(/\.[^/.]+$/, '');
-
-        mainContainer.appendChild(imgElement);
-        mainContainer.appendChild(pElement);
+        setInterval(showNextImage, 3000);
     </script>
 </body>
 </html>
