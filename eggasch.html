@@ -44,12 +44,12 @@
         /* Benutzerdefinierte Schriftarten */
         @font-face {
             font-family: "Pixelary";
-            src: url('https://github.com/eggasch/evaschneuwly/blob/main/000%20FONTS/Pixelary.ttf') format('truetype');
+            src: url('https://github.com/eggasch/evaschneuwly/blob/main/000%20FONTS/Pixelary.otf') format('opentype');
         }
 
         @font-face {
             font-family: "Dogica";
-            src: url('https://github.com/eggasch/evaschneuwly/blob/main/000%20FONTS/Dogica.ttf') format('truetype');
+            src: url('https://github.com/eggasch/evaschneuwly/blob/main/000%20FONTS/dogica/OTF/dogica.otf') format('opentype');
         }
 
         /* Fliesstext Überschrift und Text */
@@ -60,9 +60,20 @@
             color: black;
         }
 
-        /* Link URL - Keine Unterstreichung für Links im Header und Footer */
+        /* Header und Footer Textstil */
+        header, footer {
+            color: black;
+        }
+
+        /* Footer Textstil */
+        footer {
+            color: #71ff5e;
+            font-size: 10px;
+        }
+
+        /* Link URL - Unterstreichung für Links im Header und Footer */
         header a, footer a {
-            text-decoration: none;
+            text-decoration: underline;
         }
     </style>
 </head>
