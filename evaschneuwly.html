@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deine Webseite</title>
+
+    <!-- LAYOUT -->
+    <style>
+        /* LAYOUT HEADER */
+        header {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            font-family: "Arial Black", sans-serif;
+            font-size: 18px;
+            color: black;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: white;
+            z-index: 1000;
+        }
+
+        /* LAYOUT FOOTER */
+        footer {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            font-family: "Arial Black", sans-serif;
+            font-size: 10px;
+            color: black;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: white;
+            z-index: 1000;
+        }
+    </style>
+
+    <!-- STRUCTURE -->
+    <style>
+        /* NAMEN PAGES */
+        /* Hinzufügen von IDs oder Klassen für die spezifischen Seiten */
+        #entrance, #home, #work, #about, #impressum {
+            /* Stil für die einzelnen Seiten festlegen */
+        }
+    </style>
+
+    <!-- FORMAT SCHRIFT -->
+    <style>
+        /* Welcome */
+        .welcome {
+            font-family: "Arial Black", sans-serif;
+            font-size: 20px;
+            color: yellow;
+        }
+
+        /* Fliesstext Überschrift und Text */
+        h2, p {
+            font-family: "Arial Black", sans-serif;
+            font-size: 12px;
+            font-weight: bold;
+            color: black;
+        }
+
+        /* Projektlink */
+        .project-link {
+            font-family: "Arial Black", sans-serif;
+            font-size: 12px;
+            color: yellow;
+        }
+
+        /* Link URL */
+        a {
+            text-decoration: underline;
+        }
+
+        /* Link Page */
+        a.page-link {
+            /* Weitere Anpassungen für Seitenlinks */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- CONTENT HEADER -->
+    <header>
+        <div class="content-header-item" onclick="location.href='0_home.html'">EVA SCHNEUWLY</div>
+        <div class="content-header-item" onclick="location.href='a_work.html'">Work</div>
+        <div class="content-header-item" onclick="location.href='x_about.html'">About</div>
+    </header>
+
+    <!-- CONTENT FOOTER -->
+    <footer>
+        <div class="content-footer-item" onclick="location.href='y_impressum.html'">Impressum</div>
+        <div class="content-footer-item">
+            <a href="mailto:eva-schneuwly@hotmail.com">@</a>
+            <a href="https://www.instagram.com/eggasch/">III</a>
+        </div>
+    </footer>
+
+    <!-- Weitere CONTENT-Sektionen für "0 Entrance", "0 Home", etc. -->
+
+</body>
+</html>
