@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eva Schneuwly</title>
+
+    <!-- LAYOUT -->
+    <style>
+        /* LAYOUT HEADER */
+        header {
+            font-family: "Monaco", monospace;
+            font-size: 18px;
+            color: #71ff5e;
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            width: calc(100% - 40px);
+            background-color: rgba(255, 255, 255, 0);
+            z-index: 1000;
+        }
+
+        /* LAYOUT FOOTER */
+        footer {
+            font-family: "Monaco", monospace;
+            font-size: 18px;
+            color: #71ff5e;
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            width: calc(100% - 40px);
+            background-color: rgba(255, 255, 255, 0);
+            z-index: 1000;
+        }
+    </style>
+
+    <!-- FORMAT SCHRIFT -->
+    <style>
+
+        /* Fliesstext Überschrift und Text */
+        h2,
+        p {
+            font-family: "Helvetica Neue", sans-serif;
+            font-size: 12px;
+            font-weight: bold;
+            color: black;
+        }
+
+        /* Header und Footer Textstil */
+        header,
+        footer {
+            color: black;
+        }
+
+        /* Welcome Textstil */
+        h1 {
+            font-family: "Monaco", monospace;
+            font-size: 20px;
+            color: yellow;
+        }
+
+        /* Link URL - Unterstreichung für Links im Header und Footer */
+        header a,
+        footer a {
+            text-decoration: none;
+        }
+
+        /* Link Page - Nichts ändern */
+        header a,
+        footer a {
+            color: inherit;
+        }
+
+        /* Projektlink Textstil */
+        .project-link {
+            font-family: "Monaco", monospace;
+            font-size: 12px;
+            font-weight: bold;
+            color: yellow;
+        }
+    </style>
+
+    <!-- CONTENT ENTRANCE -->
+    <style>
+        #entrance-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #entrance-content img {
+            width: 200%;
+            max-width: none;
+        }
+
+        #entrance-content h1 {
+            font-family: "Monaco", monospace;
+            font-size: 20px;
+            color: yellow;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- CONTENT HEADER -->
+    <header style="display: flex; justify-content: space-between;">
+        <div style="flex: 1; text-align: left;" onclick="location.href='home.html'">Eva Schneuwly</div>
+        <div style="flex: 1; text-align: right;" onclick="location.href='work.html'">Work</div>
+        <div style="flex: 1; text-align: right;" onclick="location.href='about.html'">About</div>
+    </header>
+
+    <!-- CONTENT FOOTER -->
+    <footer style="display: flex; justify-content: space-between;">
+        <div style="flex: 1;" onclick="location.href='impressum.html'">Impressum</div>
+        <div style="flex: 1; text-align: right;">
+            <a href="mailto:eva-schneuwly@hotmail.com" style="text-decoration: none; color: #71ff5e;">Mail</a>
+            <a href="https://www.instagram.com/eggasch/" target="_blank" style="text-decoration: none; color: #71ff5e;">Instagram</a>
+        </div>
+    </footer>
+
+    <!-- CONTENT ENTRANCE -->
+    <div id="entrance-content">
+        <div>
+            <img src="https://github.com/eggasch/evaschneuwly/001%20Entrance/Wasser.jpg" alt="Entrance Image">
+            <h1>enter</h1>
+        </div>
+    </div>
+
+    <!-- Weitere Inhalte können hier hinzugefügt werden -->
+
+</body>
+
+</html>
