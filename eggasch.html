@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,13 +10,13 @@
     <style>
         /* LAYOUT HEADER */
         header {
-            font-family: "LibreBarcode39ExtendedText-Regular", sans-serif;
+            font-family: "Monaco", monospace;
             font-size: 18px;
             color: black;
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
+            top: 20px;
+            left: 20px;
+            width: calc(100% - 40px);
             background-color: white;
             z-index: 1000;
         }
@@ -26,9 +27,9 @@
             font-size: 18px;
             color: #71ff5e;
             position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
+            bottom: 20px;
+            left: 20px;
+            width: calc(100% - 40px);
             background-color: white;
             z-index: 1000;
         }
@@ -43,48 +44,69 @@
         }
 
         /* Fliesstext Überschrift und Text */
-        h2, p {
-            font-family: "Monaco", monospace;
+        h2,
+        p {
+            font-family: "Helvetica Neue", sans-serif;
             font-size: 12px;
             font-weight: bold;
             color: black;
         }
 
         /* Header und Footer Textstil */
-        header, footer {
+        header,
+        footer {
             color: black;
         }
 
+        /* Welcome Textstil */
+        h1 {
+            font-family: "Monaco", monospace;
+            font-size: 20px;
+            color: yellow;
+        }
+
         /* Link URL - Unterstreichung für Links im Header und Footer */
-        header a, footer a {
+        header a,
+        footer a {
             text-decoration: underline;
         }
 
         /* Link Page - Nichts ändern */
-        header a, footer a {
+        header a,
+        footer a {
             color: inherit;
+        }
+
+        /* Projektlink Textstil */
+        .project-link {
+            font-family: "Monaco", monospace;
+            font-size: 12px;
+            font-weight: bold;
+            color: yellow;
         }
     </style>
 </head>
+
 <body>
 
     <!-- CONTENT HEADER -->
-    <header>
-        <div style="float: left;" onclick="location.href='home.html'">Eva Schneuwly</div>
-        <div style="float: none; text-align: center;" onclick="location.href='work.html'">Work</div>
-        <div style="float: right;" onclick="location.href='about.html'">About</div>
+    <header style="display: flex; justify-content: space-between;">
+        <div style="flex: 1; text-align: left;" onclick="location.href='home.html'">Eva Schneuwly</div>
+        <div style="flex: 1; text-align: right;" onclick="location.href='work.html'">Work</div>
+        <div style="flex: 1; text-align: right;" onclick="location.href='about.html'">About</div>
     </header>
 
     <!-- CONTENT FOOTER -->
-    <footer>
-        <div style="float: left;" onclick="location.href='impressum.html'">Impressum</div>
-        <div style="float: right;">
-            <a href="mailto:eva-schneuwly@hotmail.com">Mail</a>
-            <a href="https://www.instagram.com/eggasch/" target="_blank">Instagram</a>
+    <footer style="display: flex; justify-content: space-between;">
+        <div style="flex: 1;" onclick="location.href='impressum.html'">Impressum</div>
+        <div style="flex: 1; text-align: right;">
+            <a href="mailto:eva-schneuwly@hotmail.com" style="text-decoration: none; color: #71ff5e;">Mail</a>
+            <a href="https://www.instagram.com/eggasch/" target="_blank" style="text-decoration: none; color: #71ff5e;">Instagram</a>
         </div>
     </footer>
 
     <!-- Weitere Inhalte können hier hinzugefügt werden -->
 
 </body>
+
 </html>
