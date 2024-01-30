@@ -123,12 +123,42 @@
     </footer>
 
     <!-- CONTENT ENTRANCE -->
-    <div id="entrance-content">
-        <div>
-            <img src="https://github.com/eggasch/evaschneuwly/001%20Entrance/Wasser.jpg" alt="Entrance Image">
-            <h1>enter</h1>
-        </div>
-    </div>
+<style>
+    #entrance-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        position: relative;
+    }
+
+    #entrance-content img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Damit das Bild bildschirmfüllend ist */
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    #entrance-content h1 {
+        font-family: "Monaco", monospace;
+        font-size: 20px;
+        color: yellow;
+        position: relative;
+        z-index: 1; /* Damit der Text im Vordergrund bleibt */
+    }
+</style>
+
+<!-- ... -->
+
+<!-- CONTENT ENTRANCE -->
+<div id="entrance-content">
+    <img src="https://github.com/eggasch/evaschneuwly/Wasser-kompr.jpg" alt="Entrance Image">
+    <h1>click here</h1>
+</div>
+
+
 
     <!-- Weitere Inhalte können hier hinzugefügt werden -->
 
