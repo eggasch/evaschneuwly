@@ -3,45 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deine Webseite</title>
+    <title>Eva Schneuwly</title>
 
     <!-- LAYOUT -->
     <style>
         /* LAYOUT HEADER */
         header {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            font-family: "Arial Black", sans-serif;
+            font-family: "Pixelary", sans-serif;
             font-size: 18px;
             color: black;
             position: fixed;
             top: 0;
+            left: 0;
             width: 100%;
             background-color: white;
             z-index: 1000;
+        }
+
+        /* LAYOUT HEADER - Abstand zwischen den Wörtern "About" und "Work" */
+        .content-header-item {
+            margin-right: 60px; /* Setze den Abstand entsprechend der Breite des Wortes "About" */
         }
 
         /* LAYOUT FOOTER */
         footer {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            font-family: "Arial Black", sans-serif;
+            font-family: "Dogica", sans-serif;
             font-size: 10px;
-            color: black;
+            color: #71ff5e;
             position: fixed;
             bottom: 0;
+            left: 0;
             width: 100%;
             background-color: white;
             z-index: 1000;
-        }
-    </style>
-
-    <!-- STRUCTURE -->
-    <style>
-        /* NAMEN PAGES */
-        /* Hinzufügen von IDs oder Klassen für die spezifischen Seiten */
-        #entrance, #home, #work, #about, #impressum {
-            /* Stil für die einzelnen Seiten festlegen */
         }
     </style>
 
@@ -49,14 +43,14 @@
     <style>
         /* Welcome */
         .welcome {
-            font-family: "Arial Black", sans-serif;
+            font-family: "Dogica", sans-serif;
             font-size: 20px;
             color: yellow;
         }
 
         /* Fliesstext Überschrift und Text */
         h2, p {
-            font-family: "Arial Black", sans-serif;
+            font-family: "Dogica", sans-serif;
             font-size: 12px;
             font-weight: bold;
             color: black;
@@ -64,7 +58,7 @@
 
         /* Projektlink */
         .project-link {
-            font-family: "Arial Black", sans-serif;
+            font-family: "Dogica", sans-serif;
             font-size: 12px;
             color: yellow;
         }
@@ -84,21 +78,55 @@
 
     <!-- CONTENT HEADER -->
     <header>
-        <div class="content-header-item" onclick="location.href='0_home.html'">EVA SCHNEUWLY</div>
-        <div class="content-header-item" onclick="location.href='a_work.html'">Work</div>
-        <div class="content-header-item" onclick="location.href='x_about.html'">About</div>
+        <div style="float: left;" onclick="location.href='home.html'">Eva Schneuwly</div>
+        <div style="float: right;" onclick="location.href='work.html'">Work</div>
+        <div style="float: right;" onclick="location.href='about.html'">About</div>
     </header>
 
     <!-- CONTENT FOOTER -->
-    <footer>
-        <div class="content-footer-item" onclick="location.href='y_impressum.html'">Impressum</div>
-        <div class="content-footer-item">
-            <a href="mailto:eva-schneuwly@hotmail.com">@</a>
-            <a href="https://www.instagram.com/eggasch/">III</a>
+<footer>
+    <div style="float: left;" onclick="location.href='impressum.html'">Impressum</div>
+    <div style="float: right;">
+        <a href="mailto:eva-schneuwly@hotmail.com">Mail</a>
+        <a href="https://www.instagram.com/eggasch/" target="_blank">Instagram</a>
+    </div>
+</footer>
+
+    <!-- CONTENT "Entrance" -->
+    <section id="entrance">
+        <div style="text-align: center;">
+            <img src="001 Entrance/Wasser.jpg" alt="Bild" style="width: 100vw; height: 100vh; object-fit: cover;">
+            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+                <p class="welcome" onclick="location.href='home.html'">Click here</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTENT "Home" -->
+<section id="home" style="background-color: red; position: relative;">
+    <header style="z-index: 1;">
+        <!-- Hier sollte der Code für den Header eingefügt werden -->
+        <div style="float: left;" onclick="location.href='home.html'">Eva Schneuwly</div>
+        <div class="content-header-item" onclick="location.href='about.html'">About</div>
+        <div style="float: right; margin-left: 5px;" onclick="location.href='work.html'">Work</div>
+    </header>
+    
+    <div style="text-align: center; position: relative; z-index: 0;">
+        <!-- Hier sollte der Code für den Bildwechsel und Text eingefügt werden -->
+        <img src="101 Home/2019 Imaginary Clothes.jpg" alt="Bild" style="width: 100vw; height: 50vh; object-fit: cover;">
+    </div>
+
+    <footer style="z-index: 1;">
+        <!-- Hier sollte der Code für den Footer eingefügt werden -->
+        <div style="float: left;" onclick="location.href='impressum.html'">Impressum</div>
+        <div style="float: right;">
+            <a href="mailto:eva-schneuwly@hotmail.com">Mail</a>
+            <a href="https://www.instagram.com/eggasch/" target="_blank">Instagram</a>
         </div>
     </footer>
+</section>
 
-    <!-- Weitere CONTENT-Sektionen für "0 Entrance", "0 Home", etc. -->
+    <!-- Weitere CONTENT-Sektionen für "Work", "About", etc. -->
 
 </body>
 </html>

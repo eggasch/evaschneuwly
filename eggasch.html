@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eva Schneuwly</title>
+
+    <!-- LAYOUT -->
+    <style>
+        /* LAYOUT HEADER */
+        header {
+            font-family: "Pixelary", sans-serif;
+            font-size: 18px;
+            color: black;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: white;
+            z-index: 1000;
+        }
+
+        /* LAYOUT HEADER - Abstand zwischen "Work" und "About" */
+        .content-header-item + .content-header-item {
+            margin-left: 20px; /* Anpassen des Abstands zwischen "Work" und "About" */
+        }
+
+        /* LAYOUT FOOTER */
+        footer {
+            font-family: "Dogica", sans-serif;
+            font-size: 10px;
+            color: #71ff5e;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: white;
+            z-index: 1000;
+        }
+    </style>
+
+    <!-- FORMAT SCHRIFT -->
+    <style>
+        /* Benutzerdefinierte Schriftarten */
+        @font-face {
+            font-family: "Pixelary";
+            src: url('https://github.com/eggasch/evaschneuwly/blob/main/000%20FONTS/Pixelary.ttf') format('truetype');
+        }
+
+        @font-face {
+            font-family: "Dogica";
+            src: url('https://github.com/eggasch/evaschneuwly/blob/main/000%20FONTS/Dogica.ttf') format('truetype');
+        }
+
+        /* Fliesstext Überschrift und Text */
+        h2, p {
+            font-family: "Dogica", sans-serif;
+            font-size: 12px;
+            font-weight: bold;
+            color: black;
+        }
+
+        /* Link URL - Keine Unterstreichung für Links im Header und Footer */
+        header a, footer a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- CONTENT HEADER -->
+    <header>
+        <div style="float: left;" onclick="location.href='home.html'">Eva Schneuwly</div>
+        <div style="float: right;" onclick="location.href='work.html'">Work</div>
+        <div class="content-header-item" style="float: right;" onclick="location.href='about.html'">About</div>
+    </header>
+
+    <!-- CONTENT FOOTER -->
+    <footer>
+        <div style="float: left;" onclick="location.href='impressum.html'">Impressum</div>
+        <div style="float: right;">
+            <a href="mailto:eva-schneuwly@hotmail.com">Mail</a>
+            <a href="https://www.instagram.com/eggasch/" target="_blank">Instagram</a>
+        </div>
+    </footer>
+
+    <!-- Weitere Inhalte können hier hinzugefügt werden -->
+
+</body>
+</html>
