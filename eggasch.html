@@ -9,7 +9,7 @@
     <style>
         /* LAYOUT HEADER */
         header {
-            font-family: "Pixelary", sans-serif;
+            font-family: "LibreBarcode39ExtendedText-Regular", sans-serif;
             font-size: 18px;
             color: black;
             position: fixed;
@@ -20,15 +20,10 @@
             z-index: 1000;
         }
 
-        /* LAYOUT HEADER - Abstand zwischen "Work" und "About" */
-        .content-header-item + .content-header-item {
-            margin-left: 20px; /* Anpassen des Abstands zwischen "Work" und "About" */
-        }
-
         /* LAYOUT FOOTER */
         footer {
-            font-family: "Dogica", sans-serif;
-            font-size: 10px;
+            font-family: "Monaco", monospace;
+            font-size: 18px;
             color: #71ff5e;
             position: fixed;
             bottom: 0;
@@ -43,18 +38,13 @@
     <style>
         /* Benutzerdefinierte Schriftarten */
         @font-face {
-            font-family: "Pixelary";
-            src: url('https://github.com/eggasch/evaschneuwly/blob/main/000%20FONTS/Pixelary.otf') format('opentype');
-        }
-
-        @font-face {
-            font-family: "Dogica";
-            src: url('https://github.com/eggasch/evaschneuwly/blob/main/000%20FONTS/dogica/OTF/dogica.otf') format('opentype');
+            font-family: "LibreBarcode39ExtendedText-Regular";
+            src: url('https://github.com/eggasch/evaschneuwly/blob/main/000%20FONTS/Libre_Barcode_39_Extended_Text/LibreBarcode39ExtendedText-Regular.ttf') format('truetype');
         }
 
         /* Fliesstext Überschrift und Text */
         h2, p {
-            font-family: "Dogica", sans-serif;
+            font-family: "Monaco", monospace;
             font-size: 12px;
             font-weight: bold;
             color: black;
@@ -65,15 +55,14 @@
             color: black;
         }
 
-        /* Footer Textstil */
-        footer {
-            color: #71ff5e;
-            font-size: 10px;
-        }
-
         /* Link URL - Unterstreichung für Links im Header und Footer */
         header a, footer a {
             text-decoration: underline;
+        }
+
+        /* Link Page - Nichts ändern */
+        header a, footer a {
+            color: inherit;
         }
     </style>
 </head>
@@ -82,8 +71,8 @@
     <!-- CONTENT HEADER -->
     <header>
         <div style="float: left;" onclick="location.href='home.html'">Eva Schneuwly</div>
-        <div style="float: right;" onclick="location.href='work.html'">Work</div>
-        <div class="content-header-item" style="float: right;" onclick="location.href='about.html'">About</div>
+        <div style="float: none; text-align: center;" onclick="location.href='work.html'">Work</div>
+        <div style="float: right;" onclick="location.href='about.html'">About</div>
     </header>
 
     <!-- CONTENT FOOTER -->
